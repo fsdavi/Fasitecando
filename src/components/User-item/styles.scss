@@ -1,0 +1,19 @@
+.card-user {
+    margin: 15px 0 15px 20px;
+    color: black;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 8rem;
+        height: 8rem;
+
+        margin-top: 10px;
+        border-radius: 50%;
+    }
+
+    .card-user.card {
+        width: 15rem;
+    }
+}

@@ -1,0 +1,45 @@
+#page-landing-login .card-form {
+    display: flex;
+    align-items: center;
+
+    top: 50%;
+    left: 50%;
+    margin: 110px 0 0 -174px;
+
+    border: none;
+
+    font: Montserrat, sans-serif;
+    color: #2148C0;
+    background: #ffffff;
+
+    width: 350px;
+    z-index: 9999;
+
+    img {
+        width: 250px;
+        margin: 25px 0 25px 0;
+    }
+
+    Button {
+        width: 273px;
+        text-align: center;
+        font-size: 15px;
+        margin: 20px 0px;
+        padding: 8px 110px 8px;
+    }
+
+    .SignUp {
+        margin: 0 0 10px 0;
+    }
+}
+
+#tsparticles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(329.54deg, #0c0c0e5f -90%, #050f30 10%);
+
+    z-index: 1;
+}
