@@ -15,6 +15,9 @@
 
  #grid-users {
      display: grid;
+     margin-top: 25px;
+     justify-content: center;
+     gap: 5%;
      grid-template-areas:'card card card card';
 
     .card-user {
@@ -32,9 +35,26 @@
         :nth-child(4):hover{
             background-color: #2a2c2e;
         }
- }}
+ 
+    }
 
- @media (max-width: 375px){
+    #card-users .delete-button{
+        display: flex;
+        text-align: right;
+        position: absolute;
+
+        border: none;
+        border-radius: 30%;
+    
+        background-color: #102e4d;
+        color: white;
+        padding: 10px;
+
+        z-index: 1;
+    }
+}
+
+ @media (max-width: 425px){
     #header {
         .navbar {
             display: flex;
@@ -45,7 +65,7 @@
         .form-inline {
             margin: 15px auto;
 
-            button {
+            .btn.btn-light{
             display: flex;
             margin: 15px 0px 5px  0;
         }
