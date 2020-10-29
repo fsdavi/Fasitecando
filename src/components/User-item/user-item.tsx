@@ -1,5 +1,7 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import { Card, Button, Modal, Form, FormControl } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.scss';
 import api from '../../services/api';
@@ -14,43 +16,45 @@ export interface User {
 
 export default function UserItem(props: User) {
     const [show, setShow] = useState(false);
-    const [name, setName] = useState('');
-    const [job, setJob] = useState('');
+    const [name, setName] = useState(props.first_name + ' ' + props.last_name);
+    const [job, setJob] = useState('<Null>');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    function handleUpdate(event: FormEvent) {
-        event.preventDefault();
+    async function handleUpdate(id: number) {
+        const response = await api.put(`users/${id}`,
+            {
+                name,
+                job
+            });
 
-        api.post('users', {
-            name,
-            job
-        }).then(() => {
-            alert('User updated success');
+        if (response.status === 200) {
             handleClose();
-        }).catch(() => {
-            alert('Not valid');
-        })
+            alert('Update success');
+        }
+
     }
 
     return (
         <Card className="card-user">
             <Card.Img variant="top" src={props.avatar} />
             <Card.Body>
-                <Card.Title>{props.first_name} {props.last_name}</Card.Title>
+                <Card.Title>{name}</Card.Title>
                 <Card.Text>
                     {props.email}
+                    <br />
+                    <FontAwesomeIcon icon={faBriefcase} /> : {job}
                 </Card.Text>
                 <Button variant="primary" onClick={handleShow}>Update</Button>
             </Card.Body>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Update on {props.first_name} {props.last_name}</Modal.Title>
+                    <Modal.Title>Update on {name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={handleUpdate}>
+                    <Form>
                         <Form.Label htmlFor="formName">Name</Form.Label>
                         <FormControl type="text" placeholder="Name" className="mr-sm-2" onChange={(event) => { setName(event.target.value) }} />
                         <Form.Label htmlFor="formJob">Job</Form.Label>
@@ -59,7 +63,7 @@ export default function UserItem(props: User) {
                             <Button variant="secondary" onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button variant="primary" type="submit" onSubmit={handleUpdate}>
+                            <Button variant="primary" onClick={() => handleUpdate(props.id)}>
                                 Save Changes
                             </Button>
                         </Modal.Footer>

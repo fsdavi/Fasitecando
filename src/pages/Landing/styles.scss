@@ -1,37 +1,48 @@
-#page-landing-login .card-form {
-    display: flex;
-    align-items: center;
+#page-landing-form {
+    .alert{
+        position: absolute;
+        z-index: 99999;
 
-    top: 50%;
-    left: 50%;
-    margin: 110px 0 0 -174px;
+        padding: 10px 50px;
 
-    border: none;
-
-    font: Montserrat, sans-serif;
-    color: #2148C0;
-    background: #ffffff;
-
-    width: 350px;
-    z-index: 9999;
-
-    img {
-        width: 250px;
-        margin: 25px 0 25px 0;
+        margin-left: 38%;
     }
 
-    Button {
-        width: 273px;
-        text-align: center;
-        font-size: 15px;
-        margin: 20px 0px;
-        padding: 8px 110px 8px;
-    }
+    .card-form {
+        display: flex;
+        align-items: center;
 
-    .SignUp {
-        margin: 0 0 10px 0;
-    }
-}
+        top: 50%;
+        left: 50%;
+        margin: 110px 0 0 -174px;
+
+        border: none;
+
+        font: Montserrat, sans-serif;
+        color: #2148C0;
+        background: #ffffff;
+
+        width: 350px;
+        z-index: 1000;
+
+        img {
+            width: 250px;
+            margin: 25px 0 25px 0;
+        }
+
+        Button {
+            width: 273px;
+            text-align: center;
+            font-size: 15px;
+            margin: 20px 0px;
+            padding: 8px 110px 8px;
+        }
+
+        .SignUp {
+            margin: 0 0 10px 0;
+        }
+
+}}
 
 #tsparticles{
     position: fixed;

@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react';
 import Particles from 'react-particles-js';
-import { Form, Button, Card } from 'react-bootstrap';
+import { Form, Button, Card, Modal, Alert } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
 
 import logoImg from '../../images/logo.svg';
@@ -13,8 +13,11 @@ export default function Landing() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [show, setShow] = useState(false);
 
-    function handleLogin(event: FormEvent) {
+    const handleClose = () => setShow(false);
+
+    async function handleLogin(event: FormEvent) {
         event.preventDefault();
 
         api.post('login', {
@@ -25,25 +28,29 @@ export default function Landing() {
             history.push('/dashboard');
 
         }).catch(() => {
-
-            alert('Email or password wrong!');
-
+            setShow(true)
         })
     }
 
     return (
-        <div id="page-landing-login">
+        <div id="page-landing-form">
+            <Modal show={show} onHide={handleClose}>
+                <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+                    <Alert.Heading> Email or password not valid!</Alert.Heading>
+                    <p>If you dont have a account go to SignUp.</p>
+                </Alert>
+            </Modal>
             <Card className="card-form">
                 <Form onSubmit={handleLogin}>
                     <img src={logoImg} alt="Fasitecando" />
                     <Form.Group controlId="formEmail">
-                        <Form.Label htmlFor="formEmail">Email address</Form.Label>
-                        <Form.Control as='input' type="email" placeholder="Enter email" onChange={(event) => { setEmail(event.target.value) }} />
+                        <Form.Label >Email address</Form.Label>
+                        <Form.Control as='input' type="email" placeholder="Enter email" onChange={(event) => { setEmail(event.target.value) }} required />
                     </Form.Group>
 
                     <Form.Group controlId="formPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control as='input' type="password" placeholder="Password" onChange={(event) => { setPassword(event.target.value) }} />
+                        <Form.Control as='input' type="password" placeholder="Password" onChange={(event) => { setPassword(event.target.value) }} required />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Login

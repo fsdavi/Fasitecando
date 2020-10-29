@@ -18,7 +18,7 @@
      margin-top: 25px;
      justify-content: center;
      gap: 5%;
-     grid-template-areas:'card card card card';
+     grid-template-areas:'card card card';
 
     .card-user {
         :nth-child(3){
@@ -40,18 +40,39 @@
 
     #card-users .delete-button{
         display: flex;
-        text-align: right;
         position: absolute;
+        margin: 25px 0px 0 215px;
 
-        border: none;
         border-radius: 30%;
     
         background-color: #102e4d;
         color: white;
-        padding: 10px;
+        padding: 8px;
 
         z-index: 1;
     }
+
+    #card-users .delete-button:hover {
+         background-color: #428fdc;
+     }
+}
+
+#buttons-page {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 25px;
+
+    :nth-child(1) {
+        border-color: white;
+        border-radius: 10px 0 0 10px;
+        background-color: #102e4d;
+    }
+    :nth-child(2) {
+        border-color: white;
+        border-radius: 0px 10px 10px 0px;
+        background-color: #102e4d;
+    }
+    
 }
 
  @media (max-width: 425px){
@@ -76,5 +97,34 @@
         .card-user {
             margin: 15px auto;
         }
+
+        #card-users .delete-button{
+            margin: 25px 0px 0 195px;
+        }
     }
+
+    #buttons-page {
+        position: fixed;
+        bottom: 0;
+        z-index: 1000;
+        
+
+        :nth-child(1) {
+            border-color: white;
+            border-radius: 10px 0 0 10px;
+            background-color: #102e4d;
+        }
+        :nth-child(2) {
+            border-color: white;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #102e4d;
+        }
+
+        :nth-child(1):hover,
+        :nth-child(2):hover {
+            background-color: #102e4d;
+        }
+    }
+
+    
  }
