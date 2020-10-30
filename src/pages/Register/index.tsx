@@ -24,7 +24,6 @@ export default function Register() {
             email,
             password
         }).then(() => {
-
             history.push('/');
 
         }).catch(() => {
