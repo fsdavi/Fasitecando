@@ -10,6 +10,28 @@
 
 ## 📸 Screenshots && Demo
 
+- **Responsive**
+<h1 align="center">
+    <img alt="Fasitecando" src="./.github/responsive.gif">
+</h1>
+
+- **Login and SignUp**
+<h1 align="center">
+    <img alt="Fasitecando" src="./.github/login-signup.gif">
+</h1>
+
+- **Update and Delete**
+<h1 align="center">
+    <img alt="Fasitecando" src="./.github/update-delete.gif">
+</h1>
+
+- **Pages and Search**
+<h1 align="center">
+    <img alt="Fasitecando" src="./.github/page-search.gif">
+</h1>
+
+
+
 ## 🚀 Techs
 - **Frontend:**
     - [TypeScript](https://www.typescriptlang.org/)
