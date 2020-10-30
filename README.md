@@ -1,46 +1,86 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="Fasitecando" src="./src/images/logo.svg" height="100px" />
+    <br>Fasitecando<br/>
+</h1>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fsdavi/Fasitecando?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fsdavi/Fasitecando?style=flat-square">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📸 Screenshots && Demo
 
-In the project directory, you can run:
+## 🚀 Techs
+- **Frontend:**
+    - [TypeScript](https://www.typescriptlang.org/)
+    - [React](https://reactjs.org)
+    - [Sass](https://sass-lang.com/)
 
-### `yarn start`
+    - I also used:
+        - [Particles.js](https://www.npmjs.com/package/react-particles-js)
+        - [Axios](https://www.npmjs.com/package/axios)
+        - [FontAwesome](https://fontawesome.com/)
+        - [React-Bootstrap](https://react-bootstrap.github.io/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### How to install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> 1. Download or clone the Project-name repository
 
-### `yarn test`
+``` 
+    git clone git@github.com:fsdavi/Fasitecando.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> 2. Open the project in your preferred editor
 
-### `yarn build`
+> 3. In your terminal, install the necessary packages:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+``` 
+    yarn
+```
+or
+``` 
+    npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> 4. Great! Now you can go to the name-project folder and start the server:
+``` 
+    cd name-project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    yarn start
+```
+or
+``` 
+    npm start
+```
 
-### `yarn eject`
+---
+> 5. Open your browser! The name-project will be available at http://localhost:3000/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## What come next
+- **On Frontend:**
+    - Going to work more on design for a better UX, the figma project is comming;
+    - Build a API Rest with Node.js and MongoDB;
+    - The model remaains MVC.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<div align="center">
+<h3 align="center">Author</h3>
+<br />
+<p align="center">
+<a href="https://www.linkedin.com/in/davisfreire/" target="_blank">Davi :space_invader:</a>
+</p>
 
-## Learn More
+<p align="center">
+    <span>
+        <a href="https://github.com/fsdavi" target="_blank">Github</a>
+    </span>
+    |
+    <span>
+        <a href="https://medium.com/@fsdavi.dev" target="_blank">Medium</a>
+    </span>
+    :heart:
+</p>
+</div>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
