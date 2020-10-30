@@ -41,7 +41,7 @@
     #card-users .delete-button{
         display: flex;
         position: absolute;
-        margin: 25px 0px 0 215px;
+        margin: 25px 0px 0 14rem;
 
         border-radius: 30%;
     
@@ -127,4 +127,14 @@
     }
 
     
+ }
+
+ @media (min-width: 768px){
+    #grid-users {
+        grid-template-areas: 'card card';}
+ }
+
+ @media (min-width: 1024px){
+    #grid-users {
+        grid-template-areas: 'card card card';}
  }
