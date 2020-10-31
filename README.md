@@ -82,7 +82,6 @@ or
 ---
 
 ## What come next
-- **On Frontend:**
     - Going to work more on design for a better UX, the figma project is comming;
     - Build a API Rest with Node.js and MongoDB;
     - The model remaains MVC.
